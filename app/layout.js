@@ -3,6 +3,7 @@ import { Inter, Roboto, Montserrat, Titillium_Web } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 
+
 const inter = Inter({weight: '400', subsets: ["latin"] });
 const roboto = Roboto({weight: '400', subsets: ["latin"] });
 const montserrat = Montserrat({weight: '400', subsets: ["latin"] });
@@ -18,8 +19,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       <script src="https://kit.fontawesome.com/5c59429581.js" crossOrigin="anonymous" defer></script>
+      <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script> 
       </head>
-      <body className={[ titillium.className]}>
+      <body className={`${titillium.className}`}>
       <span className='md:h-[160%] lg:h-[200%] h-[150%] w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover grayscale-0 absolute'/>
         <Navbar/>
         {children}
