@@ -2,8 +2,8 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -14,5 +14,22 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        
+        mytheme: {
+          "primary" : '#016999',
+          "secondary": '#598FB2',
+          "accent": '#F08A3D',
+          // "primary" : '#3FABEC',
+          // "secondary": '#EB1897',
+          // "accent": '#A0DDE6',
+          
+        },
+      },
+      
+    ]
+  }
 };

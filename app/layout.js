@@ -1,7 +1,12 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Inter, Roboto, Montserrat, Titillium_Web } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import Navbar from "./components/Navbar/Navbar";
+
+const inter = Inter({weight: '400', subsets: ["latin"] });
+const roboto = Roboto({weight: '400', subsets: ["latin"] });
+const montserrat = Montserrat({weight: '400', subsets: ["latin"] });
+const titillium = Titillium_Web({weight: '400', subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +16,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+      <script src="https://kit.fontawesome.com/5c59429581.js" crossOrigin="anonymous" defer></script>
+      </head>
+      <body className={[ titillium.className]}>
+      <span className='md:h-[160%] lg:h-[200%] h-[150%] w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover grayscale-0 absolute'/>
+        <Navbar/>
+        {children}
+      </body>
     </html>
   );
 }
