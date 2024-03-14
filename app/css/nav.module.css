@@ -1,0 +1,23 @@
+
+.hide{
+    display: none;
+    position: absolute;
+    font-size: xx-large;
+    top:2rem;
+    left: 5.5rem;
+    rotate: 0deg;
+    color: rgba(238, 124, 37, 1);
+    
+}
+
+.logo{
+    position: relative;
+    top: .5;
+}
+.logo:hover + .hide {
+    display: inline-flex;
+
+}
+
+
+/* hide hidden relative top-4 left-0 */
