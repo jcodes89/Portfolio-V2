@@ -5,58 +5,51 @@ import Link from 'next/link'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-
+import Observer from 'gsap/Observer'
 
 
 
 
 
 const WorkHeroCard = (props) => {
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger, Observer)
   const container = useRef()
 
   useGSAP(() => {
-
-    const img = document.querySelector('.image')
-
-    const animation = gsap.to('.hide', {
-      display: 'flex'
-    })
-
-    img.addEventListener('fullscreenchange', () => {
-
-    }
-    )
+    const tl = time
+    
 
 
   }, {scope: container})
 
   return (
-    <div className='card h-fit w-full p-0 shadow-md shadow-primary rounded-md my-5 hide hidden -translate-x-[1000px]'>
+    <div  ref={container}  className='card h-fit w-full p-0 shadow-md shadow-primary rounded-md my-5 hide hidden -translate-x-[1000px]'>
         <div className='projectImage p-0 '>
             <Link href={`/work/${props.projectLink}`}  className='w-full h-full'>
               <Image src={props.projectImage} className='image rounded-t-md' alt='Image of different web developer projects'/>
             </Link>
         </div>
-        <div ref={container} className='hide hidden'>
-          <div className='projectHeader border-b-4 border-accent'>
-            <h2 className='my-3 pl-3 text-accent font-bold text-3xl'>{props.projectHeading}</h2>
-          </div>
-          <div className='projectTable'>
-            <table className='w-full text-white text-base'>
-              <tbody className=''>
-                <tr className=''>
-                  <td className='techHeader pl-3 py-3 text-lg font-bold'>
-                    Technologies
-                  </td>
-                  <td className='text-center'>
-                    <ul className='p-3 '>
-                        {props.listItem}
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+        <div className='hidden'>
+          <div className='hide'>
+            <div className='projectHeader border-b-4 border-accent'>
+              <h2 className='my-3 pl-3 text-accent font-bold text-3xl'>{props.projectHeading}</h2>
+            </div>
+            <div className='projectTable'>
+              <table className='w-full text-white text-base'>
+                <tbody className=''>
+                  <tr className=''>
+                    <td className='techHeader pl-3 py-3 text-lg font-bold'>
+                      Technologies
+                    </td>
+                    <td className='text-center'>
+                      <ul className='p-3 '>
+                          {props.listItem}
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
     </div>
