@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script> 
       </head>
       <body className={`${titillium.className}`}>
-      <span className='h-[200%] w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover grayscale-0 absolute'/>
+      <span className='h-[150%] w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover grayscale-0 absolute'/>
         <Navbar/>
         {children}
       </body>

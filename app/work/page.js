@@ -33,14 +33,14 @@ const page = ({html, css, javascript}) => {
 
 
   return (
-    <main ref={container} className=' h-full w-full absolute p-4'>
+    <main ref={container} className=' h-full w-full absolute p-4 xl:grid xl:grid-cols-2 xl:gap-2'>
       <WorkHeroCard
         projectLink='davinch'
         projectImage={davinch}  
         projectHeading='Davinch Leather Co.'
         listItem={Davinch.map((item) => {
           return(
-            <li key={item.id}>{item.tech}</li>
+            <li key={item.id} className=' ml-0  p-[.5rem] text-sm lg:text-lg hover:text-primary  cursor-default'>{item.tech}</li>
           )
         })}
       />
@@ -50,7 +50,7 @@ const page = ({html, css, javascript}) => {
         projectHeading='Disaster Relief App'
         listItem={ReliefStack.map((item) => {
           return(
-            <li key={item.id}>{item.tech}</li>
+            <li key={item.id} className=' ml-0 p-[.5rem] text-sm lg:text-lg hover:text-primary cursor-default'>{item.tech}</li>
           )
         })}
       />

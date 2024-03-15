@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import React, {useRef} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import Observer from 'gsap/Observer'
-
+import styles from '../../css/work-card.module.css'
 
 
 
@@ -16,7 +16,67 @@ const WorkHeroCard = (props) => {
   const container = useRef()
 
   useGSAP(() => {
-    const tl = time
+    const tl = gsap.timeline()
+    tl.pause()
+    
+    tl.to('#hideCard', {
+      display:'block',
+      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+      opacity: '.9',
+      duration: 1, 
+      ease: 'expo.inOut',
+      stagger:1,
+      
+      
+    })
+    .to('#hideHead', {
+      display:'block',
+      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+      opacity: '1',
+    })
+    .to('#hideBtn', {
+      display:'block',
+      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+      opacity: '1',
+ 
+    })
+    .to('#hideList', {
+      display:'block',
+      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+      opacity: '1',
+
+    })
+    
+
+    // tl.to('#hide', {
+    //   display: 'flex'
+    // })
+    // const img = document.getElementById('#img')
+    // const hidden = document.getElementById('#hide')
+    
+
+    // window.addEventListener('DOMContentLoaded', (e) => {
+    //   if(img){
+    //     img.addEventListener('mouseenter', () => {
+    //       tl.play()
+    //     })
+
+    //   }
+    
+
+    // })
+
+  Observer.create({
+    target: '#img',
+    type: 'touch, wheel, pointer',
+    onHover: () => {
+      tl.play()
+    },
+    onHoverEnd: () => {
+      tl.reverse()
+    },
+
+  })
     
 
 
@@ -24,13 +84,27 @@ const WorkHeroCard = (props) => {
 
   return (
     <div  ref={container}  className='card h-fit w-full p-0 shadow-md shadow-primary rounded-md my-5 hide hidden -translate-x-[1000px]'>
-        <div className='projectImage p-0 '>
-            <Link href={`/work/${props.projectLink}`}  className='w-full h-full'>
-              <Image src={props.projectImage} className='image rounded-t-md' alt='Image of different web developer projects'/>
-            </Link>
+        <div id='img'  className='projectImage p-0 cursor-grab'>
+              <Image src={props.projectImage} className='image rounded-md w-full h-full' alt='Image of different web developer projects'/>
+           
+          <div  id='hideCard' className={styles.hiddenCard}>
+            <div id='hideHead' className={styles.hiddenHeading}>
+              <h2 className='text-xl pt-2 lg:2xl:'>{props.projectHeading}</h2>
+            </div>
+            <div id='hideBtn' className={styles.hiddenBtn}>
+              <Link href={`/work/${props.projectLink}`}  className='btn hover:bg-primary xl:text-xl ' >
+                View Project
+              </Link>
+            </div>
+            <div id='hideList' className={styles.hiddenList}>
+              <ul className='pb-2 flex flex-row lg:text-2xl'>
+                  {props.listItem}
+              </ul>
+            </div>
+          </div>
         </div>
-        <div className='hidden'>
-          <div className='hide'>
+        {/* <div id='hidden' className={styles.hide}>
+          <div className=''>
             <div className='projectHeader border-b-4 border-accent'>
               <h2 className='my-3 pl-3 text-accent font-bold text-3xl'>{props.projectHeading}</h2>
             </div>
@@ -51,7 +125,7 @@ const WorkHeroCard = (props) => {
               </table>
             </div>
           </div>
-        </div>
+        </div> */}
     </div>
   )
 }
