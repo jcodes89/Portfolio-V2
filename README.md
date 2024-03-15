@@ -1,36 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# Web Developer Portfolio Showcase
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Welcome to my Web Developer Portfolio Showcase! This repository hosts a web application highlighting my work, skills, and expertise as a web developer. Leveraging HTML, CSS, Tailwind CSS, JavaScript, React, Next.js, and GSAP, this portfolio demonstrates my proficiency in front-end development and animation.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Pages:
+- **Landing Page:** Experience captivating GSAP animations throughout the landing page, providing an engaging introduction to my portfolio.
+- **My Works Page:** Explore a curated selection of my projects, showcasing the range and quality of my work in web development.
+- **About Page:** Learn more about me, my background, passion for web development, and the journey that led me here.
+- **Contact Page:** Connect with me effortlessly using the integrated contact form, enabling inquiries, collaborations, or feedback.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+With a blend of cutting-edge technologies and creative design, this portfolio showcases my dedication to crafting immersive and visually appealing web experiences. Explore the repository to discover the projects, skills, and achievements that define my journey as a web developer!
