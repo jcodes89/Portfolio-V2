@@ -3,12 +3,14 @@ import React, {useRef} from 'react'
 import WorkHeroCard from '../components/Work/WorkHeroCard'
 import davinch from '@/public/Images/davinchsite.jpg'
 import relief from '@/public/Images/relief.jpg'
+import portfolio from '@/public/Images/portfolio.jpg'
 import gsap from 'gsap/gsap-core'
 import { useGSAP } from '@gsap/react'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
-import Davinch from '../components/Work/DavinchStack'
+import DavinchStack from '../components/Work/DavinchStack'
 import ReliefStack from '../components/Work/ReliefStack'
+import PortfolioStack from '../components/Work/PortfolioStack'
 
 
 const page = ({html, css, javascript}) => {
@@ -35,10 +37,20 @@ const page = ({html, css, javascript}) => {
   return (
     <main ref={container} className=' h-full w-full absolute p-4 xl:grid xl:grid-cols-2 xl:gap-2'>
       <WorkHeroCard
+        projectLink='my-portfolio'
+        projectImage={portfolio}
+        projectHeading='JeremyDev Portfolio'
+        listItem={PortfolioStack.map((item) => {
+          return(
+            <li key={item.id} className=' ml-0 p-[.5rem] text-sm lg:text-lg hover:text-primary cursor-default'>{item.tech}</li>
+          )
+        })}
+      />
+      <WorkHeroCard
         projectLink='davinch'
         projectImage={davinch}  
         projectHeading='Davinch Leather Co.'
-        listItem={Davinch.map((item) => {
+        listItem={DavinchStack.map((item) => {
           return(
             <li key={item.id} className=' ml-0  p-[.5rem] text-sm lg:text-lg hover:text-primary  cursor-default'>{item.tech}</li>
           )
