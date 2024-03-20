@@ -35,9 +35,12 @@ const WorkHeroCard = (props) => {
       opacity: '1',
     })
     .to('#hideBtn', {
-      display:'block',
+      display:'flex',
+      flexDirection: 'row',
       clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
       opacity: '1',
+      width: '100%',
+      justifyContent: 'center'
  
     })
     .to('#hideList', {
@@ -69,6 +72,13 @@ const WorkHeroCard = (props) => {
   Observer.create({
     target: '#img',
     type: 'touch, wheel, pointer',
+    onClick: ()=> {
+      tl.play()
+      
+    },
+    onRelease: () => {
+      tl.reverse()
+    },
     onHover: () => {
       tl.play()
     },
@@ -77,23 +87,24 @@ const WorkHeroCard = (props) => {
     },
 
   })
-    
-
 
   }, {scope: container})
 
   return (
     <div  ref={container}  className='card h-fit w-full p-0 shadow-md shadow-primary rounded-md my-5 hide hidden -translate-x-[1000px]'>
         <div id='img'  className='projectImage p-0'>
-              <Image src={props.projectImage} className='image rounded-md w-full h-full' alt='Image of different web developer projects'/>
+              <Image src={props.projectImage} className='image rounded-md w-full h-full cursor-pointer' alt='Image of different web developer projects'/>
            
           <div  id='hideCard' className={styles.hiddenCard}>
             <div id='hideHead' className={styles.hiddenHeading}>
               <h2 className='text-xl pt-2 lg:2xl:'>{props.projectHeading}</h2>
             </div>
             <div id='hideBtn' className={styles.hiddenBtn}>
-              <Link href={`/work/${props.projectLink}`}  className='btn hover:bg-primary xl:text-xl ' >
+              <Link href={`/work/${props.projectLink}`}  className='btn hover:bg-primary xl:text-xl mr-1' >
                 View Project
+              </Link>
+              <Link href={`https://github.com/jcodes89/${props.githubLink}`} target='_blank'  className='btn hover:bg-primary xl:text-xl ml-1' >
+                GitHub
               </Link>
             </div>
             <div id='hideList' className={styles.hiddenList}>

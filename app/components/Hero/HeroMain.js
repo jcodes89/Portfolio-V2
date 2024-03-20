@@ -59,8 +59,9 @@ const HeroMain = () => {
   
 
   return (
-    <section ref={container} className='h-[50%] flex justify-center items-center p-3 md:h-[100%]'>
-      <div className='card h-fit w-full lg:w-[75%] xl:w-[50%]'>
+    <>
+    <section ref={container} className=' w-full h-screen flex justify-center items-center p-3'>
+      <div className=' card h-fit w-full lg:w-[75%] xl:w-[50%]'>
         <div id='heroCard' className={styles.HeroCard}>
           <div id='heroMain' className='hidden translate-x-[400px] p-3 py-5 w-full rounded-md mt-4 text-accent  '>
             <h2 className='text-[5rem] font-bold lg:text-[7rem] xl:text-[8rem]'>Web Developer</h2>
@@ -73,6 +74,8 @@ const HeroMain = () => {
         </div>
       </div>
     </section>
+  
+    </>
   )
 }
 

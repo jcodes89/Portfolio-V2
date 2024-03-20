@@ -11,6 +11,7 @@ const page = () => {
       projectImage={reliefMain}
       projectHeading='Disaster Relief Web App'
       projectCategory='Web App'
+      href='https://jeremydev.codes'
       projectTechList={Relief.map((item) => {
         return(
           <li key={item.id}>{item.tech}</li>
