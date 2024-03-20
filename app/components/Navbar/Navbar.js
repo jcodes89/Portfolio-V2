@@ -26,17 +26,59 @@ const Navbar = () => {
         <ul className='flex'>
           <li className='px-3'><i className="fa-solid fa-moon hover:text-black cursor-pointer md:text-2xl"></i></li>
           <li className=''>
-            <div className="dropdown dropdown-bottom dropdown-left md:hidden text-xl">
+            <div className="dropdown dropdown-bottom dropdown-left md:hidden text-xl flex flex-col justify-center items-middle w-full">
               <div className='' tabIndex="0"><i className=" focus:rotate-90 after::rotate-90  fa-solid fa-bars cursor-pointer"></i></div>
-                <ul tabIndex="0" className="dropdown-content z-[1] menu p-2 shadow-md shadow-primary border-white bg-primary rounded-box w-18 text-center">
-                  <li><Link href='https://www.linkedin.com/in/jeremy-sluder-0077b099/' target='_blank' className='my-1 hover:bg-accent hover:text-primary'><i className="fa-brands fa-linkedin text-3xl"></i></Link></li>
-                  <li><Link href='https://github.com/jcodes89' target='_blank' className='hover:bg-accent hover:text-primary'><i className="fa-brands fa-github text-3xl"></i></Link></li>
+                <ul tabIndex="0" className="dropdown-content z-[1] menu p-2 shadow-md shadow-primary border-gray-50 bg-primary rounded-box w-18 flex items-center">
+                  <li>
+                    <Link href='/work' className='my-1 hover:bg-accent hover:text-primary text-lg text-center'>Projects</Link>
+                  </li>
+                  <li>
+                    <Link href='/contact' className='my-1 hover:bg-accent hover:text-primary text-lg text-center'>Contact</Link>
+                  </li>
+                  <li>
+                    <Link href='/about' className='my-1 hover:bg-accent hover:text-primary text-lg text-center'>About</Link>
+                  </li>
+                  <li>
+                    <Link href='/resume' className='my-1 hover:bg-accent hover:text-primary text-lg text-center'>Resume</Link>
+                  </li>
+                  <li>
+                    <Link href='https://www.linkedin.com/in/jeremy-sluder-0077b099/' target='_blank' className='my-1 hover:bg-accent hover:text-primary'><i className="fa-brands fa-linkedin text-3xl"></i></Link>
+                  </li>
+                  <li>
+                    <Link href='https://github.com/jcodes89' target='_blank' className='hover:bg-accent hover:text-primary'><i className="fa-brands fa-github text-3xl"></i></Link>
+                  </li>                 
                 </ul>
             </div>
             <div className=''>
-              <ul className=" hidden md:flex md:flex-row  border-white">
-                    <li><Link href='https://www.linkedin.com/in/jeremy-sluder-0077b099/' target='_blank'><i className="fa-brands fa-linkedin text-3xl px-3 pl-0 hover:text-primary"></i></Link></li>
-                    <li><Link href='https://github.com/jcodes89' target='_blank'><i className="fa-brands fa-github text-3xl hover:text-primary"></i></Link></li>
+              <ul className=" hidden md:flex md:flex-row  border-gray-50">
+                    <li className='px-2'>
+                      <Link href='/work' className={styles.linked}>Projects</Link>
+                    </li>
+                    <li className='px-2'>
+                      <Link href='/contact'  className={styles.linked}>Contact</Link>
+                    </li>
+                    <li className='pl-2 pr-3'>
+                      <Link href='/about' className={styles.linked}>About</Link>
+                    </li>
+                    <li className='pl-2 pr-3'>
+                      <Link href='/resume' className={styles.linked}>Resume</Link>
+                    </li>
+                    <li>
+                      <Link href='https://www.linkedin.com/in/jeremy-sluder-0077b099/' target='_blank' className={styles.linked}><i className="fa-brands fa-linkedin text-3xl px-3 pl-0 hover:text-gray-50"></i></Link>
+                      <span className={styles.hideLink1}>
+                        <span className={titilliumBold.className}>
+                          LinkedIn
+                        </span>
+                      </span>
+                    </li>
+                    <li>
+                      <Link href='https://github.com/jcodes89' target='_blank' className={styles.github}><i className="fa-brands fa-github text-3xl hover:text-gray-50"></i></Link>
+                      <span className={styles.hideLink2}>
+                        <span className={titilliumBold.className}>
+                          Github
+                        </span>
+                      </span>
+                    </li>
                   </ul>
             </div>
           </li>

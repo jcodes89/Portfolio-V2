@@ -13,7 +13,7 @@ import ReliefStack from '../components/Work/ReliefStack'
 import PortfolioStack from '../components/Work/PortfolioStack'
 
 
-const page = ({html, css, javascript}) => {
+const page = () => {
   const container = useRef()
 
 

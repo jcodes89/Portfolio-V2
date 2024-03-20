@@ -21,8 +21,8 @@ export default function RootLayout({ children }) {
       <script src="https://kit.fontawesome.com/5c59429581.js" crossOrigin="anonymous" defer></script>
       <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script> 
       </head>
-      <body className={`${titillium.className}`}>
-      <span className='h-[150%] w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover grayscale-0 absolute'/>
+      <body className={`${titillium.className} bg-primary h-full w-full`}>
+        <span className='h-[170vh] lg:h-[200vh] w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover grayscale-0 absolute'/>
         <Navbar/>
         {children}
       </body>
