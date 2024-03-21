@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const ProjectMain = (props) => {
   return (
-    <main className=' h-fit w-full absolute bg-accent px-2 lg:px-4 xl:px-6 lg:mt-4 text-white'>
+    <main className=' h-fit w-full absolute bg-accent top-12 px-2 lg:px-4 xl:px-6 lg:mt-4 text-white'>
     <div className='grid grid-cols-1 lg:grid-cols-2'>
     <section className='projectHeroImage h-full flex justify-center items-center mx-4'>
         <div>

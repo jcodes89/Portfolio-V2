@@ -2,7 +2,12 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <>
+      <main className='h-screen w-full absolute bg-red-200'>
+        red
+
+      </main>
+    </>
   )
 }
 

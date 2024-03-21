@@ -25,9 +25,9 @@ export default function RootLayout({ children }) {
       <body className={`${titillium.className} `}>
 
         <Navbar/>
-        <span className='h-screen w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover bg-center absolute z-0'/>
+        <span className='h-[89em]  2xl:h-[100em] w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover bg-center absolute z-0'/>
         {children}
-        <Footer/>
+        {/* <Footer/> */}
       </body>
     </html>
   );

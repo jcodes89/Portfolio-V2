@@ -8,7 +8,7 @@ const titilliumBold = Titillium_Web({weight: ['900'], subsets: ["latin"] });
 
 const Navbar = () => {
   return (
-    <nav className='h-14 w-full flex flex-row justify-between items-center text-xl font-semibold text-accent md:text-2xl absolute z-10'>
+    <nav className='h-14 w-full flex flex-row justify-between items-center text-xl font-semibold text-accent md:text-2xl absolute z-50'>
       <div className='header-left pl-4 '>
         <div className='text-base md:text-lg hover:text-gray-50'>
           <Link href={'/'} className={styles.logo} >

@@ -8,13 +8,7 @@ import HeroLink from './components/HeroLink/HeroLink';
 export default function Home() {
   return (
     <>
-    {/* <span className='h-screen w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover bg-center  absolute'/> */}
       <HeroMain/>
-      {/* <HeroSub/> */}
-      {/* <div className='h-screen w-full bg-blue-300'>
-
-      </div> */}
-      {/* <Footer/> */}
     </>
   )
 }

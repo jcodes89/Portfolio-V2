@@ -14,7 +14,7 @@
     display: none;
     opacity: 1;
     left: 50%;
-    top: 42.5%;
+    top: 35%;
     transform: translateX(-50%);
     padding-left: .75rem;
 }

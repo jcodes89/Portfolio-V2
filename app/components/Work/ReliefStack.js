@@ -3,30 +3,26 @@ import React from 'react'
 const ReliefStack = [
     {
         id: 1,
-        tech: 'Html'
-    },
-    {
-        id: 2,
         tech: 'Tailwind'
     },
     {
-        id: 3,
+        id: 2,
         tech: 'Javascript'
     },
     {
-        id: 4,
+        id: 3,
         tech: 'React.js'
     },
     {
-        id: 5,
+        id: 4,
         tech: 'Next.js'
     },
     {
-        id: 6,
+        id: 5,
         tech: 'Prisma.io'
     },
     {
-        id: 7,
+        id: 6,
         tech: 'MongoDB'
     },
 ]
