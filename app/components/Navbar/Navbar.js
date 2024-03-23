@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className='h-14 w-full flex flex-row justify-between items-center text-xl font-semibold text-accent md:text-2xl absolute z-50'>
       <div className='header-left pl-4 '>
-        <div className='text-base md:text-lg hover:text-gray-50'>
+        <div className='text-base md:text-lg hover:text-gray-50 2xl:text-2xl'>
           <Link href={'/'} className={styles.logo} >
             Jeremy Sluder
           </Link>
@@ -23,7 +23,7 @@ const Navbar = () => {
       </div>
       <div className='header-right pr-4'>
         <ul className='flex'>
-          <li className='px-3'><i className="fa-solid fa-moon hover:text-black cursor-pointer text-1xl"></i></li>
+
           <li className=''>
             <div className="dropdown dropdown-bottom dropdown-left md:hidden text-xl flex flex-col justify-center items-middle w-full">
               <div className='' tabIndex="0"><i className=" focus:rotate-90 after::rotate-90  fa-solid fa-bars cursor-pointer"></i></div>
@@ -49,7 +49,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className=''>
-              <ul className=" hidden md:flex md:flex-row  border-gray-50 text-xl">
+              <ul className=" hidden md:flex md:flex-row  border-gray-50 text-xl 2xl:text-2xl">
                     <li className='px-2 hover:text-gray-50'>
                       <Link href='/work' className={styles.linked}>Projects</Link>
                     </li>
@@ -63,7 +63,7 @@ const Navbar = () => {
                       <Link href='/resume' className={styles.linked}>Resume</Link>
                     </li>
                     <li>
-                      <Link href='https://www.linkedin.com/in/jeremy-sluder-0077b099/' target='_blank' className={styles.linked}><i className="fa-brands fa-linkedin text-2xl px-3 pl-0 hover:text-gray-50"></i></Link>
+                      <Link href='https://www.linkedin.com/in/jeremy-sluder-0077b099/' target='_blank' className={styles.linked}><i className="fa-brands fa-linkedin text-2xl px-3 pl-0 hover:text-gray-50 2xl:text-3xl"></i></Link>
                       <span className={styles.hideLink1}>
                         <span className={titilliumBold.className}>
                           LinkedIn
@@ -71,7 +71,7 @@ const Navbar = () => {
                       </span>
                     </li>
                     <li>
-                      <Link href='https://github.com/jcodes89' target='_blank' className={styles.github}><i className="fa-brands fa-github text-2xl hover:text-gray-50"></i></Link>
+                      <Link href='https://github.com/jcodes89' target='_blank' className={styles.github}><i className="fa-brands fa-github text-2xl hover:text-gray-50 2xl:text-3xl"></i></Link>
                       <span className={styles.hideLink2}>
                         <span className={titilliumBold.className}>
                           Github

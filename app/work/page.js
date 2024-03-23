@@ -1,29 +1,28 @@
 'use client'
-import React, {useRef} from 'react'
-import Link from 'next/link'
+import React, {useRef as UseRef} from 'react'
 import WorkHeroCard from '../components/Work/WorkHeroCard'
 import davinch from '@/public/Images/davinchsite.jpg'
 import relief from '@/public/Images/relief.jpg'
 import portfolio from '@/public/Images/portfolio.jpg'
 import gsap from 'gsap/gsap-core'
-import { useGSAP } from '@gsap/react'
+import { useGSAP as UseGSAP } from '@gsap/react'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
 import DavinchStack from '../components/Work/DavinchStack'
 import ReliefStack from '../components/Work/ReliefStack'
 import PortfolioStack from '../components/Work/PortfolioStack'
-import Footer from '../components/Footer'
 
 
 const page = () => {
-  const container = useRef()
+  
+  const container = UseRef()
 
 
   
   gsap.registerPlugin(ScrollTrigger);
   const tl = gsap.timeline()
 
-  useGSAP(() => {
+  UseGSAP(() => {
     gsap.to('.hide', {
       display: 'block',
       ease: 'expo',
@@ -38,9 +37,9 @@ const page = () => {
 
   return (
     <>
-    
-    <main ref={container} className='w-full h-screen  lg:h-full grid grid-cols-1 place-items-center  center py-12 p-4 xl:grid-cols-2 xl:gap-4'>
-      <span className='z-20 h-fit pt-5'>
+    <span className='h-[130vh] lg:h-full  w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover bg-center absolute z-0'/>
+    <main ref={container} className='w-auto h-fit relative top-16 grid grid-cols-1 place-items-center lg:grid-cols-2 lg:gap-3 px-4'>
+      <span className=' z-20 h-fit pt-5'>
         <p className='parClick text-white lg:hidden'>Please click any project to learn more!</p>
         <p className='parHover hidden text-white lg:flex'>Please hover over any project to learn more!</p>
       </span>

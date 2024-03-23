@@ -91,9 +91,9 @@ const WorkHeroCard = (props) => {
   }, {scope: container})
 
   return (
-    <div  ref={container}  className='card h-fit w-fit  md:w-[75%] xl:w-full p-0 shadow-md shadow-primary rounded-md my-5 hide hidden -translate-x-[1000px]'>
-        <div id='img'  className='projectImage p-0'>
-              <Image src={props.projectImage} className='image rounded-md w-full h-fit cursor-pointer' alt='Image of different web developer projects'/>
+    <div  ref={container}  className='card h-fit w-auto  md:w-[75%] lg:w-full  p-0 shadow-md shadow-primary rounded-md my-3 hide hidden -translate-x-[1000px]'>
+        <div id='img'  className='projectImage p-0  h-full w-auto'>
+              <Image src={props.projectImage} className='image rounded-md w-auto h-fit cursor-pointer' alt='Image of different web developer projects'/>
            
           <div  id='hideCard' className={styles.hiddenCard}>
             <div id='hideHead' className={styles.hiddenHeading}>

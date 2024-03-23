@@ -1,11 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
-import davinchMain from '@/public/Images/davinchsite.jpg'
+import davinchMain from '@/public/Images/main.jpg'
 import ProjectMain from '@/app/components/Work/Project/ProjectMain'
 import Davinch from '@/app/components/Work/DavinchStack'
 import DavinchImages from '../../components/Work/Project/DavinchImageList'
 
+
+
 const page = () => {
+
+  
   return (
     <ProjectMain
       projectImage={davinchMain}

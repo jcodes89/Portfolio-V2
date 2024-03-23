@@ -2,7 +2,7 @@ import { Inter, Roboto, Montserrat, Titillium_Web } from "next/font/google";
 
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer";
+
 
 
 const inter = Inter({weight: '400', subsets: ["latin"] });
@@ -20,15 +20,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       <script src="https://kit.fontawesome.com/5c59429581.js" crossOrigin="anonymous" defer></script>
-      <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script> 
+      <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js" async ></script> 
       </head>
-      <body className={`${titillium.className} `}>
-
+      <body className={`${titillium.className} h-screen w-full`}>
+      <span className='h-full w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover bg-center absolute z-0'/>
         <Navbar/>
-        <span className='h-[89em]  2xl:h-[100em] w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover bg-center absolute z-0'/>
         {children}
-        {/* <Footer/> */}
       </body>
     </html>
   );
 }
+//<span className='h-full md:h-screen w-full bg-[url("../public/images/pawel-czerwinski-fRzUPSFnp04-unsplash.jpg")] bg-cover bg-center absolute z-10'/>
+//h-[89em]  2xl:h-[100em]
